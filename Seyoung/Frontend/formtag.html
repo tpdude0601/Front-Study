@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그</title>
+    <style>
+        fieldset:first-child input:enabled { background-color:#e1e1e1}
+        fieldset:first-child input:focus{ background-color:yellowgreen}
+        fieldset:first-child input:disabled{background-color: #333;
+            color: #999}
+    </style>
+</head>
+<body>
+    <!--긴 양식 -> post 방식 -->
+    <form>
+        <fieldset>
+            <legend>1번 폼</legend>
+        <input type="text" value="읽기전용필드" readonly><br>
+        <input type="text" autofocus><br>
+        <label for="userId">아이디</label>
+        <input type="text" is=userId><br>
+        <input type="text" disabled><br>
+        <input type="password">
+        <input type="text" placeholder="여기에 아이디를 입력하세요">
+    </fieldset>
+    <fieldset>
+        <legend>1번 폼</legend>
+        <input type="email" name="frm01">
+        <input type="submit" value="완료">
+        <button><img src="http://placehold.it/38x38" alt="search"></button>
+    </fieldset>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <select name="" id="">
+        <option value="">목록을 선택하세요</option>
+        <option value="1">목록1</option>
+        <option value="2">목록2</option>
+        <option value="3">목록3</option>
+        <option value="4">목록4</option>
+        <option value="5">목록5</option>
+    </select>    
+</form>
+</body>
+</html>

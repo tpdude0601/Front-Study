@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <style>
+        /*내부 스타일 시트*/
+        table, td, th {
+            border: 1px solid #333;
+            border-top: 1px solid sandybrown;
+            border-bottom: 1px solid seagreen;
+            border-width: 1px 0 1px 0;
+            border-collapse: collapse; /* td 사이 간격 초기화 */
+        }
+        /* 시계 방향 */
+        /* 2개 넣으면, (상하), (좌우) */
+        /* 3개 넣으면 상, (좌우), 하 */
+
+        table tr{background-color: red;}
+        table tr:nth-child(2n-1){background-color: yellow;}
+
+        ul>li:nth-child(4){background-color:thistle;}
+        ul>li:first-child{background-color: skyblue;}
+        ul>li:nth-child(2n-1){font-size: 1.5em;}
+
+        p{background-color:yellow;}
+        span{background-color:wheat;}     
+        p:first-of-type{color: red;
+        span:first-of-type{color:green;}
+        span:nth-of-type(5){color:magenta;}
+
+       
+        /* :last-of-type  :nth-of-type(n) :nth-last-of-type(n)*/
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        //내부 스크립트
+    </script>
+    <script src="js/jQuery.js"></script>
+</head>
+<body>
+    <!-- ul>(li.list-items>a)*5-->
+    <!-- ul>li{메뉴$}*5 -->
+    <!-- ul>(li.list-items>a[href=#])*5 -->
+    
+    <!-- h1+div -->
+    <h1>
+        <a href="#"><img src="http://placehold.it/200x40" alt="logo"></a>
+    </h1>
+
+    <div></div>
+    <!-- #wrap>#header#header+nav#gnb+section.s$*4+footer#footer -->
+    <div id="wrap">
+        <div id="header"></div>
+        <nav id="gnb"></nav>
+        <!-- ul>(li>a{menuBtn})*8 -->
+        <ul>
+            <li><a href="">menuBtn</a></li>
+            <li><a href="">menuBtn</a></li>
+            <li><a href="">menuBtn</a></li>
+            <li><a href="">menuBtn</a></li>
+            <li><a href="">menuBtn</a></li>
+            <li><a href="">menuBtn</a></li>
+            <li><a href="">menuBtn</a></li>
+            <li><a href="">menuBtn</a></li>
+        </ul>
+        <section class="s1"></section>
+        <section class="s2"></section>
+        <section class="s3"></section>
+        <section class="s4"></section>
+        <footer id="footer"></footer>
+    </div>
+    <!-- h${sampleText}*6 -->
+    <h1>sampleText</h1> <!--32px, 2em, 200%-->
+    <p>문단태그<br><br>문단태그</p> 
+    <!--주제가 다른 문단 p태그(줄 간격이 훨씬 큼)-->
+    <h2>sampleText</h2> <!--24px, 1.5em-->
+    <h3>sampleText</h3> <!--기본 단위, 16px, 1em-->
+    <h4>sampleText</h4>
+    <h5>sampleText</h5>
+    <h6>sampleText</h6>
+    
+    <table border="1">
+        <!--cellspacing: 칸과 칸 사이 거리
+             - margin, 형제요소 사이 간격 여백
+            cellpadding: 칸과 내부 콘텐츠 사이 거리
+             - padding, 부모와 자식 요소 여백 -->
+        <tr>
+            <th colspan="2">title1</th>
+        </tr>
+        <tr>
+            <td rowspan="2">text2-1</td>
+            <td>text2-2</td>
+        </tr>
+        <tr>
+            <td>text3-1</td>
+            <td>text3-2</td>
+        </tr>
+    </table>
+    <ul>
+        <li>list01</li>
+        <li>list02</li>
+        <li>list03</li>
+        <li>list04</li>
+        <li>list05</li>
+        <li>list06</li>
+        <li>list07</li>
+    </ul>
+    
+    <div>
+        <p>sampleText01</p>
+        <p>sampleText02</p>
+        <p>sampleText03</p>
+        <span>spanText01</span>
+        <span>spanText02</span>
+        <span>spanText03</span>
+        <span>spanText04</span>
+    </div>
+</body>
+</html>

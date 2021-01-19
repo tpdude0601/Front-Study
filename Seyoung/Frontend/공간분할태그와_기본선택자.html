@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공간분할태그와 css기본선택자</title>
+    <style>
+        *{margin:0; padding:0;} /*임의 영역 초기화*/
+        div{color: green;}
+        #box{background-color:yellow; }
+        .orange {color:orange;}
+        .font24 {font-size:24px;}
+        .bg-gray{background-color: gray;}
+        /*인접 선택자 => 선택된 요소의 바로 다음 요소*/
+        #box+div{font-size:24px;} /* 형제 관계인 바로 다음 요소 선택 */
+        /* 일반 형제 선택자 (틸드선택자) => 선택된 요소의 다음의 동생들 */
+        #box ~ span{ background-color:pink;}
+        /* 속성 선택자 */
+        span[class] {font-style: italic;}
+        span[class=orange]{text-decoration: underline;}
+        /* 가상 클래스 */
+        div:hover{background-color: powderblue !important; transition: background-color 2s;}
+    </style>
+</head>
+<body>
+    <div>1번째박스</div>
+    <div id="box">2번째박스</div>
+    <div>3번째박스</div>
+    <div>4번째박스</div>
+    <div>5번째박스</div>
+    <span>1번째영역</span>
+    <span class="orange">2번째영역</span>
+    <span class="orange font24 bg-gray">3번째영역</span>
+    <span class="orange bg-gray">4번째영역</span>
+    <span>5번째영역</span>
+</body>
+</html>
