@@ -17,7 +17,9 @@ img {
 }
 
 #wrap {
-    width: 960px;
+    width: 95%;
+    max-width: 1100px;
+    min-width: 960px;
     margin: 0 auto;
 }
 
@@ -35,6 +37,9 @@ img {
 #header #gnb {
     position: absolute;
     bottom: 10px;
+    max-width: 1100px;
+    min-width: 960px;
+    width: 100%;
     right: 0;
 }
 
@@ -58,10 +63,11 @@ img {
 /* 3 */
 
 .article {
-    width: 220px;
+    /* width: 220px; */
+    width: 22.917%;
     height: 280px;
     float: left;
-    margin: 10px;
+    margin: 10px 1.042px;
     border: 1px solid palevioletred;
     box-sizing: border-box;
 }
@@ -72,7 +78,7 @@ img {
 #footer {
     height: 110px;
     background-color: yellow;
-    float: clear-both;
+    float: clear;
 }
 
 
@@ -80,17 +86,23 @@ img {
 
 @media screen and (max-width:768px) {
     #wrap {
-        width: 600px;
+        min-width: 600px;
+        max-width: 700px;
     }
-    #header #gnb li {
+    #header #gnb {
+        min-width: 600px;
+        max-width: 700px;
+    }
+    /* #header #gnb li {
         width: 120px;
-    }
+    } */
     .main {
         height: 400px;
     }
     .article {
-        width: 180px;
+        width: 30%;
         height: 230px;
+        margin: 10px 1.667%;
     }
 }
 
@@ -99,12 +111,20 @@ img {
 
 @media screen and (max-width: 460px) {
     #wrap {
-        width: 360px;
+        max-width: 460px;
+        min-width: 360px;
+    }
+    #header #gnb #li {
+        width: 33.3333%;
     }
     .main {
         height: 200px;
     }
     .article {
-        margin: 10px 90px;
+        width: 50%;
+        margin: 10px 25%;
     }
 }
+
+
+/*가변/부모*100*/
