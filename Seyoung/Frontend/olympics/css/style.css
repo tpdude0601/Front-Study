@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrap {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* ㄱ */
+
+#header {
+    height: 150px;
+    background-color: yellow;
+    position: relative;
+}
+
+#header h1 {
+    width: 250px;
+    background-color: red;
+    height: 100%;
+}
+
+#header h1 img {
+    width: 80%;
+    height: 100%;
+}
+
+#header #gnb {
+    background-color: violet;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+#header #gnb li {
+    float: left;
+    margin-left: 20px;
+}
+
+/* ㄴ */
+
+.main {
+    height: 500px;
+    background-color: wheat;
+    background-image: url(../img/main_image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.main h2 {
+    background-color: rgba(11, 230, 157, 0.5);
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px 10px;
+    color: #fff;
+    /* 정가운데 배치 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ㄷ */
+
+.container {
+    height: 650px;
+    background-color: whitesmoke;
+}
+
+.container section>h2 {
+    display: none;
+}
+
+.container section.s1 {
+    height: 300px;
+    text-align: center;
+}
+
+.container section.s1 article {
+    width: 50%;
+    background-color: seashell;
+    float: left;
+}
+
+.container section.s1 article h3{
+    padding: 15px 0 10px;
+}
+
+.container section.s1 article.notices table{
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.container section.s1 article.notices table tr:nth-child(2n-1){
+    background-color:#fdb813;
+}
+
+.container section.s1 article.notices table td{
+    width: 150px;
+    padding:10px;
+    text-align:right;
+}
+
+.container section.s1 article.notices table td:first-child{
+    width: 400px;
+    text-align:left;
+}
+
+.container section.s2 ul{text-align:center;}
+.container section.s2 li{float:left; width: 33.3333%; }
+
+/* ㄹ */
+
+#footer {
+    height: 150px;
+    background-color: yellowgreen;
+}
