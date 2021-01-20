@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight:500;
+}
 
 ul, ol {
     list-style: none;
@@ -20,13 +24,11 @@ a {
 
 #header {
     height: 150px;
-    background-color: yellow;
     position: relative;
 }
 
 #header h1 {
     width: 250px;
-    background-color: red;
     height: 100%;
 }
 
@@ -70,6 +72,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-weight:900;
 }
 
 /* ㄷ */
@@ -94,36 +97,70 @@ a {
     float: left;
 }
 
-.container section.s1 article h3{
+.container section.s1 article h3 {
     padding: 15px 0 10px;
 }
 
-.container section.s1 article.notices table{
+.container section.s1 article.notices table {
     border-collapse: collapse;
+    text-align: left;
+    font-weight:300;
+}
+
+.container section.s1 article.notices table tr:nth-child(2n-1) {
+    background-color: #fdb813;
+}
+
+.container section.s1 article.notices table td {
+    width: 150px;
+    padding: 10px;
+    text-align: right;
+}
+
+.container section.s1 article.notices table td:first-child {
+    width: 400px;
     text-align: left;
 }
 
-.container section.s1 article.notices table tr:nth-child(2n-1){
-    background-color:#fdb813;
+.container section.s2 ul {
+    text-align: center;
 }
 
-.container section.s1 article.notices table td{
-    width: 150px;
-    padding:10px;
-    text-align:right;
+.container section.s2 li {
+    float: left;
+    width: 33.3333%;
 }
-
-.container section.s1 article.notices table td:first-child{
-    width: 400px;
-    text-align:left;
-}
-
-.container section.s2 ul{text-align:center;}
-.container section.s2 li{float:left; width: 33.3333%; }
 
 /* ㄹ */
 
 #footer {
     height: 150px;
-    background-color: yellowgreen;
+    background-color:#333;
+}
+
+#footer ul.footer-menu, #footer address {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fff;
+    font-style:normal;
+}
+
+#footer ul.footer-menu li {
+    float: left;
+    color: lightgrey;
+}
+
+#footer ul.footer-menu li a {
+    color: #fff;
+}
+
+#footer ul.footer-menu li::after {
+    content: "|";
+    margin: 0 10px;
+}
+
+#footer ul.footer-menu li:last-child::after{
+    content:"";
 }
