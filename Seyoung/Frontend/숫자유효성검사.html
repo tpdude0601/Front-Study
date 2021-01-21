@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 유효성 검사</title>
+    <script>
+        // isNaN()으로 유효성 검사
+
+        var chkVal = prompt("암호를 입력하세요");
+        var chkOK = isNaN(chkVal);
+
+        if (chkOK) {
+            document.write("숫자만 입력이 가능합니다.");
+        } else {
+            window.open("http://www.naver.com");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창 열기/닫기</title>
+</head>
+
+<body>
+    <button onclick="openWin()">open</button>
+    <button onclick="closeWin()">close</button>
+
+    <script>
+        var myWindow;
+
+        function openWin() {
+            myWindow = window.open("http://naver.com", "myWindow", "width=800,height=600");
+        }
+
+        function closeWin() {
+            myWindow.close();
+        }
+    </script>
+</body>
+
+</html>

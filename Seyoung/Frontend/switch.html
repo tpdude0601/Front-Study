@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+    <script>
+        var today = new Date();
+        var day = "";
+        switch (today.getDay()) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                day = "평일입니다.";
+                break;
+            case 0:
+            case 6:
+                day = "주말입니다.";
+                break;
+            default:
+                break;
+        }
+
+        document.write(day);
+        document.write(today.getFullYear() + "년 " + (today.getMonth() + 1) + "월 " + today.getDate() + "일 입니다.");
+        alert("이 페이지는 " + document.lastModified + "에 수정되었습니다.");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <script>
+        // // new ObjectName(); 으로 인스턴스를 생성하면 느려지는 항목
+        // // new Number(), new String(), new Boolean(); new Object(), new Array();
+
+        // var baby = {
+        //     age: "2살",
+        //     birth: "5월 25일",
+        //     sex: "남자",
+        //     getAge: function() {
+        //         return this.age;
+        //     }
+        // };
+
+        // var reAge = baby.getAge();
+        // document.write(reAge);
+
+        function Car(cr, ht, wt) {
+            this.cr01 = cr;
+            this.ht01 = ht;
+            this.wt01 = wt;
+            this.pt = print; // 참조, 인자값으로 넘겨줄 시에는 괄호를 사용하지 않음 
+        }
+
+        function print() {
+            document.write(this.cr01 + "<br>");
+            document.write(this.ht01 + "<br>");
+            document.write(this.wt01 + "<br>");
+        }
+
+        myCar = new Car("yello", 100, 20);
+        myCar.pt();
+
+        yourCar = new Car("빨강", 5, 1000);
+        yourCar.pt();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

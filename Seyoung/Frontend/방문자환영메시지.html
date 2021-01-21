@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방문자환영메시지</title>
+    <style>
+        h1 {
+            color: orange;
+        }
+    </style>
+    <script>
+        var visitor = prompt("당신의 이름을 입력하세요", "이름");
+
+        if (visitor == "" || visitor == "이름") {
+            visitor = "방문자";
+        }
+
+        document.write("<h1>" + visitor + "님의 방문을 환영합니다.</h1>")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

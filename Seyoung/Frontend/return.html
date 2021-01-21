@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return</title>
+    <script>
+        function add(val1, val2) {
+            var sum = val1 + val2;
+            return sum;
+        }
+
+        var fnLV = add(20, 15);
+        document.write(fnLV + "<br>");
+
+        function fnGV() {
+            var fnGVSum = fnLV + 2;
+            return fnGVSum;
+        }
+
+        document.write(fnGV() + "<br>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
