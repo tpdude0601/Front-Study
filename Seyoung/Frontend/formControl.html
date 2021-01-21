@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form유효성검사</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: gray;
+        }
+        
+        .formwrap {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .div_Join {
+            border: 2px solid #f0f;
+            height: 46px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .div_Join input {
+            width: 280px;
+            border: 0;
+            outline: 0;
+            font-size: 1.5em;
+        }
+        
+        .div_Join span {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formwrap">
+        <h1>NAVER</h1>
+        <form name="frm01">
+            <div class="div_Join">
+                <input type="text" maxlength="50" name="uid" onblur="fnCheck()"><span>@naver.com</span>
+            </div>
+            <span id="resultID"></span>
+        </form>
+    </div>
+
+    <script>
+        function fnCheck() {
+            var frm = document.frm01;
+            var resultTxt;
+
+            if (frm.uid.value == "") {
+                resultTxt = "필수 정보입니다.";
+                document.getElementById("resultID").style.color = "red";
+            } else {
+                resultTxt = "사용가능한 아이디입니다."
+                document.getElementById("resultID").style.color = "green";
+            }
+
+            document.getElementById("resultID").innerHTML = resultTxt;
+        }
+    </script>
+</body>
+
+</html>
