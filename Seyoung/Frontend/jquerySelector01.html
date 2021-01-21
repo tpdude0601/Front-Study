@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery selector 01</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 전체요소 선택자
+            $("*").css("color", "red");
+
+            // Tag = element = 요소 
+            $("li").css("color", "green");
+
+            // id 선택자
+            $("#point").css("color", "blue");
+
+            // class 선택자
+            $(".bigfont").css("font-size", "24px");
+
+            // 부모 자식 선택자
+            // 자손 (직하위)
+            $("ol>li").css("background-color", "yellow");
+            // // 후손 (직하위)
+            // $("ol li").css("background-color", "yellow");
+        });
+    </script>
+
+</head>
+
+<body>
+    <ul>
+        <li class="bigfont">ul-list-01</li>
+        <li id="point">ul-list-02</li>
+        <li class="bigfont">ul-list-03</li>
+        <li>ul-list-04</li>
+    </ul>
+    <h1>hello</h1>
+    <ol>
+        <li>ol-list-01</li>
+        <li>ol-list-02</li>
+        <li>ol-list-03</li>
+    </ol>
+</body>
+
+</html>

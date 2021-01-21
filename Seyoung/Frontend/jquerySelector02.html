@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery selector 02</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // 형제 선택자
+            $("#list-item02+li").css("color", "red");
+
+            // 복수 선택자
+            $("#list-item02~li").css("background-color", "yellow");
+
+            // 구조 선택자
+            $("ol>li:nth-child(3)").css("background-color", "skyblue");
+
+            // index 넘버 (0, 1, 2, ... 기준)
+
+            // odd => 홀수 
+            // even => 짝수
+            $("ol>li:odd").css("color", "pink");
+
+            // index 넘버 
+            $("ol>li:eq(2)").css("font-size", "24px"); // 같은 것
+            $("ol>li:gt(2)").css("font-weight", "bold"); // 인덱스 넘버 이후 
+            // $ lt // 인덱스 넘버 이전
+        });
+    </script>
+
+</head>
+
+<body>
+    <ul>
+        <li id="list-item01">list-items01</li>
+        <li id="list-item02">list-items02</li>
+        <li id="list-item03">list-items03</li>
+        <li id="list-item04">list-items04</li>
+        <li id="list-item05">list-items05</li>
+    </ul>
+
+    <ol>
+        <li>list-items01</li>
+        <li>list-items02</li>
+        <li>list-items03</li>
+        <li>list-items04</li>
+        <li>list-items05</li>
+    </ol>
+</body>
+
+</html>
