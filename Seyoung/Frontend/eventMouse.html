@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventMouse-mouseenter/mouseleave</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <p>이미지에 마우스를 올려보세요</p>
+    <img src="https://i.ytimg.com/vi/nDuCD1D92HY/maxresdefault.jpg" alt="구름사진" width="500">
+    <script>
+        $(document).ready(function() {
+
+            // // 마우스를 올렸을 때
+            // $("img").mouseenter(function() {
+            //     $(this).attr("src", "https://img.insight.co.kr/static/2020/10/08/700/img_20201008103713_16ki1ejr.jpg").attr("width", "200").attr("alt", "구름고양이사진");
+            // });
+
+            // // 마우스가 벗어났을 때
+            // $("img").mouseleave(function() {
+            //     $(this).attr("src", "https://i.ytimg.com/vi/nDuCD1D92HY/maxresdefault.jpg").attr("width", "500").attr("alt", "구름사진");
+            // });
+
+            $("img").hover(function() {
+                $(this).attr("src", "https://img.insight.co.kr/static/2020/10/08/700/img_20201008103713_16ki1ejr.jpg").attr("width", "200").attr("alt", "구름고양이사진");
+            }, function() {
+                $(this).attr("src", "https://i.ytimg.com/vi/nDuCD1D92HY/maxresdefault.jpg").attr("width", "500").attr("alt", "구름사진");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

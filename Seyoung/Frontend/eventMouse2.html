@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventMouse2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="https://img.insight.co.kr/static/2020/10/08/700/img_20201008103713_16ki1ejr.jpg">list1-고양이</a>
+    <a href="https://i.ytimg.com/vi/nDuCD1D92HY/maxresdefault.jpg">list2-구름</a>
+
+    <img src="https://i.ytimg.com/vi/nDuCD1D92HY/maxresdefault.jpg" alt="구름사진" width="500">
+    <script>
+        $(document).ready(function() {
+            $("a").click(function() {
+                $("img").attr("src", $(this).children().attr('src'));
+                return false; // a 태그의 링크 기능이 빠지게 됨 
+            });
+        });
+    </script>
+</body>
+
+</html>

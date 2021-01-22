@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll()</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            border: 1px solid gold;
+            overflow: scroll;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>아래 박스에서 스크롤</p>
+    <div>(서울=연합뉴스) 김예나 기자 = 국내 신종 코로나바이러스 감염증(코로나19) 확산세가 한결 누그러지면서 22일 신규 확진자 수는 300명대 중반을 나타냈다. 지난 19일(386명) 이후 사흘 만에 다시 300명대로 내려온 것이다. 특히 300명대 중반까지 떨어진 것은 '3차 대유행' 초기 단계인 지난해 11월 하순 이후 두달 만이다. 이처럼 신규 확진자 수는 완만한 감소세를 이어가고 있지만 사우나, 직장, 우체국 등 일상적 공간을 고리로
+        한 집단감염 사례가 잇따르고 있어 언제든 재확산의 불씨가 되살아날 수 있는 상황이다. 정부는 이르면 내달 초부터 시작될 백신 접종에 앞서 현행 '사회적 거리두기'(수도권 2.5단계, 비수도권 2단계)와 5인 이상 모임 금지 조처를 통해 확진자 발생을 지속해서 억제해 나간다는 계획이다.</div>
+    <p>scrolled <span>0</span>times</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var scroll_time = 0;
+
+            $("div").scroll(function() {
+                $("span").text(scroll_time += 1);
+            });
+
+        });
+    </script>
+</body>
+
+</html>
