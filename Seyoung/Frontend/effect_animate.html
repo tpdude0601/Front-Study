@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            margin-bottom: 20px;
+        }
+        
+        #anibox {
+            width: 80%;
+            margin: 0 auto;
+            height: 500px;
+            background-color: aquamarine;
+            position: relative;
+        }
+        
+        #anibox .icon-border {
+            background-color: wheat;
+            position: absolute;
+            padding: 20px;
+            width: 1px;
+            height: 1px;
+            border-radius: 50%;
+            border: 10px solid;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: bounce 1s ease-in-out infinite alternate;
+        }
+        
+        #anibox .icon-border:hover {
+            animation-play-state: paused;
+        }
+        
+        #anibox i {
+            font-size: 1em;
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: translate(-90%, -50%);
+            }
+            50% {
+                transform: translate(-50%, -80%);
+            }
+            70% {
+                transform: translate(-80%, -30%);
+            }
+            100% {
+                transform: translate(-40%, -50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn1">Animate width</button>
+    <button class="btn2">Reset width</button>
+
+    <div id="box"></div>
+
+    <div id="anibox">
+        <div class="icon-border">
+            <i class="fa fa-bed"></i>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn1").click(function() {
+                $("#box").animate({
+                    width: "300px"
+                });
+            });
+
+            $(".btn2").click(function() {
+                $("#box").animate({
+                    width: "100px"
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

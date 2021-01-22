@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+</head>
+
+<body>
+    <button class="btn1">slide up</button>
+    <button class="btn2">slide down</button>
+    <button class="btn3">slide toggle</button>
+
+    <p><img src="img/bean2.png" alt="slide"></p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn1").click(function() {
+                $("p").slideUp();
+            });
+
+            $(".btn2").click(function() {
+                $("p").slideDown();
+            });
+
+            $(".btn3").click(function() {
+                $("p").slideToggle();
+            });
+        });
+    </script>
+</body>
+
+</html>
