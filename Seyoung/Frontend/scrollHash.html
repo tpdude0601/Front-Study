@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollHash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        #header {
+            width: 50px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+        
+        #header a {
+            display: block;
+            text-align: center;
+            font-size: 2em;
+        }
+        
+        #header .indi {
+            width: inherit;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        #header a::after {
+            content: "○";
+        }
+        
+        #header a:hover::after {
+            content: "●";
+        }
+        
+        section {
+            height: 100vh;
+            background-color: tan;
+            padding-top: 70px;
+        }
+        
+        section:nth-child(2n) {
+            background-color: skyblue;
+        }
+        
+        #top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 20px;
+            background-color: blueviolet;
+            border-radius: 10px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#header a").click(function(e) {
+                e.preventDefault();
+
+                var hash = this.hash;
+
+                $("html, body").animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+                    window.location.hash = hash;
+                });
+            });
+
+            $("#top").click(function() {
+                $("html, body").animate({
+                    scrollTop: $("html, body").offset().top
+                }, 800);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="top">▲</div>
+    <header id="header">
+        <nav class="indi">
+            <a href="#section1"></a>
+            <a href="#section2"></a>
+            <a href="#section3"></a>
+            <a href="#section4"></a>
+        </nav>
+    </header>
+
+
+    <section id="section1">section Title 1</section>
+    <section id="section2">section Title 2</section>
+    <section id="section3">section Title 3</section>
+    <section id="section4">section Title 4</section>
+</body>
+
+</html>
